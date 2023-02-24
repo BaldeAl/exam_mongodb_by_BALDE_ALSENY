@@ -20,7 +20,11 @@ promise.then((db) => {
 // Set up middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use('/pages', express.static("./book_store/pages"));
 app.use(express.static('public'));
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/book_store/index.html');
+  });
 
 // Set up routes
 app.use('/books', bookRoutes);
