@@ -1,63 +1,25 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Bibliothéque</title>
-  </head>
-  <body>
-    <h1>Bibliothéque</h1>
-    <a href="/books/new">Ajouter un livre</a>
-    <ul>
-      <% books.forEach(function(book) { %>
-        <li>
-          <a href="/books/<%= book._id %>"><%= book.title %></a>
-        </li>
-      <% }); %>
-    </ul>
-  </body>
-</html>
- -->
  <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Bookstore</title>
+    <title><img src="./assets/img/icone.webp">Bookstore</title>
+    
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
-  <body>
+  <body class="acceuil">
+    <header>
     <h1>Bookstore</h1>
-    <a href="/books/new">Add Book</a>
-    <table>
-      <thead>
-        <tr>
-          <th>Titre</th>
-          <th>Auteur</th>
-          <th>Genre</th>
-          <th>Description</th>
-          <th>Image</th>
-          <th>Date de publication</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% books.forEach(function(book) { %>
-          <tr>
-            <td><%= book.title %></td>
-            <td><%= book.author %></td>
-            <td><%= book.genre %></td>
-            <td><%= book.description %></td>
-            <td><img src="<%= book.image %>"></td>
-            <td><%= book.publishedDate %></td>
-            <td>
-              <a href="/books/<%= book._id %>">View</a>
-              <a href="/books/<%= book._id %>/edit">Edit</a>
-              <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
-                <button>Delete</button>
-              </form>
-            </td>
-          </tr>
-        <% }); %>
-      </tbody>
-    </table>
+    <ul id="navigation">
+      <li><a href="#" title="Accueil">Acceuil</a></li>
+      <li><a href="./pages/add.html" title="ajouter un livre ">Ajouter un livre</a></li>
+      <li><a href="./pages/show.html" title="pour consulter la liste de livre">Liste de livre</a></li>
+    </ul>
+    </header>
+    
+
   </body>
+  <!-- <script src="./assets/js/script.js"></script> -->
 </html>

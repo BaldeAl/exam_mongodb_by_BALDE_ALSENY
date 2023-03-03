@@ -1,0 +1,47 @@
+#navigation li {
+    float: left ;
+    width: 150px ;
+    border: 1px solid 
+  #600 ;
+    background: 
+  #c00 ;
+  }
+#navigation li a {
+    display: block ;
+    background: 
+  #900 url(lienCoulissant.png) left top no-repeat ;
+    color: 
+  #fff ;
+    font: 1em "Trebuchet MS",Arial,sans-serif ;
+    line-height: 1em ;
+    padding: 4px 0 ;
+    text-align: center ;
+  }	
+#navigation li a:hover, #navigation li a:focus, #navigation li a:active {
+    background: 
+  #033 url(lienCoulissant.png) right top no-repeat ;
+  }
+
+.acceuil {
+    background-image: url(../img/book.png);
+    background-size: cover;
+    font-family: Algerian;
+    font-style: oblique;
+}
+.acceuil h1 {
+    text-align: justify;
+    text-shadow: #fff;
+    font-size: 8em;
+    text-decoration: solid;
+    text-decoration: #033;
+}
+.acceuil a {
+    text-transform: uppercase;
+    text-decoration-line: none;
+  
+}
+header h1 {
+  background-image: url("../img/store.jpg");
+  background-size: contain;
+  color: aliceblue;
+}

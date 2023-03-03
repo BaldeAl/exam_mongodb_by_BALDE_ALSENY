@@ -2,28 +2,50 @@
 <html>
   <head>
     <title>Ajouter un livre</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
   </head>
   <body>
-    <h1>Ajouter un livre</h1>
-    <form action="/books" method="POST" enctype="multipart/form-data">
+    <header>
+       <h1>Ajouter un livre</h1>
+       <ul id="navigation">
+          <li><a href="/" title="Accueil">Acceuil</a></li>
+          <li><a href="../pages/show.html" title="liste">Liste</a></li>
+          
+        </ul>
+    </header>
+    <table style="opacity: 0;">
+      <thead>
+        <tr>
+          <th>Titre</th>
+          <th>Auteur</th>
+          <th>Genre</th>
+          <th>Description</th>
+          <th>Date de publication</th>
+          <th>Détails</th>
+          <th>Suppression</th>
+        </tr>
+      </thead>
+      <tbody id="books">
+
+      </tbody>
+    <form name="form" id="form-ajout">
       <label for="title">Titre</label>
-      <input type="text" id="title" name="title" required>
+      <input type="text" id="title" name="title" class="form-control" required>
 
       <label for="author">Auteur</label>
-      <input type="text" id="author" name="author" required>
+      <input type="text" id="author" name="author" class="form-control" required>
       <label for="genre">Genre</label>
-      <input type="text" id="genre" name="genre" required>
+      <input type="text" id="genre" name="genre" class="form-control"  required>
 
       <label for="description">Description</label>
-      <textarea id="description" name="description" required></textarea>
+      <textarea id="description" name="description"  class="form-control"></textarea>
 
-      <label for="image">Image</label>
-      <input type="file" id="image" name="image" accept="image/*" require>
       <label for="publishedDate">Date de publication</label>
-      <input type=date id="publishedDate" name="publishedDate" required>
+      <input type="text" id="publishedDate" name="publishedDate" class="form-control" required>
 
-      <button type="submit">Ajouter</button>
+      <button class="btn btn-outline-success" id="valid">Ajouter</button>
     </form>
-    <a href="../index.html">Retourner à la liste</a>
+    <script src="../assets/js/script.js"></script>
   </body>
 </html>

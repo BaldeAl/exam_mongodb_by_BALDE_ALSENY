@@ -1,59 +1,37 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= book.title %></title>
-  </head>
-  <body>
-    <h1><%= book.title %></h1>
-    <p><%= book.author %></p>
-    <p><%= book.genre %></p>
-    <p><%= book.description %></p>
-    <img src="/uploads/<%= book.image %>" alt="<%= book.title %>">
-    <p><%= book.publishedDate %></p>
-    <a href="/books/<%= book._id %>/edit">Editer</a>
-    <form action="/books/<%= book._id %>?_method=DELETE" method="POST">
-      <button type="submit">Supprimer</button>
-    </form>
-  </body>
-</html>
- -->
-
- <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= book.title %></title>
-  </head>
-  <body>
-    <h1><%= book.title %></h1>
-    <table>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Bibliothèque inter-planètaire</title>
+</head>
+<body>
+  <header>
+    <h1>Bibliothèque inter-planètaire</h1>
+    <ul id="navigation">
+      <li><a href="/" title="Accueil">Acceuil</a></li>
+      <li><a href="../pages/add.html" title="ajouter un livre ">Ajouter un livre</a></li>
+      <li><a href="../pages/show.html" title="pour consulter la liste de livre">Liste de livre</a></li>
+    </ul>
+  </header>
+  <table>
+    <thead>
       <tr>
-        <td>Titre:</td>
-        <td><%= book.title %></td>
+        <th>Titre</th>
+        <th>Auteur</th>
+        <th>Genre</th>
+        <th>Description</th>
+        <th>Date de publication</th>
+        <th>Détails</th>
+        <th>Suppression</th>
       </tr>
-      <tr>
-        <td>Auteur:</td>
-        <td><%= book.author %></td>
-      </tr>
-      <tr>
-        <td>Genre:</td>
-        <td><%= book.genre %></td>
-      </tr>
-      <tr>
-        <td>Description:</td>
-        <td><%= book.description %></td>
-      </tr>
-      <tr>
-        <td>Image:</td>
-        <td><img src="<%= book.image %>"></td>
-      </tr>
-      <tr>
-        <td>Date de publication:</td>
-        <td><%= book.publishedDate %></td>
-      </tr>
-    </table>
-    <a href="/books">retourner à la liste</a>
-  </body>
+    </thead>
+    <tbody id="books">
+
+    </tbody>
+    <button id="valid" style="opacity: 0;"></button>
+  <script src="../assets/js/script.js"></script>
+</body>
 </html>
