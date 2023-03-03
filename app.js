@@ -12,19 +12,18 @@ let promise = mongoose.connect("mongodb+srv://alseny:Azerty123@clusterbalde.ouik
 promise.then((db) => {
     console.log("DB connecté !");
     
-    app.listen(5000, () => {
-        console.log("Listening on port 3001 :|");
+    app.listen(3000, () => {
+        console.log("Listening on port 3000 :|");
     });
 });
 
-// Set up middleware
+
 app.use(express.json());
 app.use('/pages', express.static("./book_store/pages"));
 app.use('/assets', express.static("./book_store/assets"))
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/book_store/index.html");
   });
-  
 //Ajouter un nouveau livre dans la bibliothèque
 const Book = require('./models/book')
 app.post('/books', (req, res) => {
@@ -54,8 +53,6 @@ app.get('/books', (req, res) => {
 //pour effectuer une recherche
 
 app.get('/books/:id', (req, res) => {
-    // Pour effectuer une recherche on va utiliser le modèle
-    // BodyParser permet de conserver l'id dans req.params.id
     Book.findOne({_id: req.params.id}, (err, obj) => {
       if(err) {
         console.log(err);
@@ -89,4 +86,3 @@ app.put('/books/:id', (req, res) => {
       res.sendStatus(200);
     });
   });
-// Set up rout

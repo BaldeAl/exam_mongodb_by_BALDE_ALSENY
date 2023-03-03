@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>modifier un livre</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/img/img-default.png" type="image/x-icon">
+    <title>modifier un livre</title>
   </head>
   <body>
     <header>
       <h1>Modifier un livre</h1>
       <ul id="navigation">
         <li><a href="/" title="Accueil">Acceuil</a></li>
-        <li><a href="./pages/add.html" title="ajouter un livre ">Ajouter un livre</a></li>
-        <li><a href="./pages/show.html" title="pour consulter la liste de livre">Liste de livre</a></li>
+        <li><a href="../pages/add.html" title="ajouter un livre ">Ajouter un livre</a></li>
+        <li><a href="../pages/show.html" title="pour consulter la liste de livre">Liste de livre</a></li>
       </ul>
     </header>
     <br>
-    <!-- <form action="/books/<%= book._id %>?_method=PUT " method="POST" enctype="multipart/form-data">
-     -->
-    <form id="bookModif" enctype="multipart/form-data">
+    <br>
+  
+    <form class="form-text" id="bookModif" enctype="multipart/form-data">
 
-      <label for="title">Titre</label>
-      <input type="text" id="title" name="title" class="form-control">
+      <label for="title"class="form-label">Titre</label>
+      <input type="text" id="title" name="title" class="form-control"><br>
 
-      <label for="author">Auteur</label>
-      <input type="text" id="author" name="author" class="form-control">
-      <label for="genre">Genre</label>
-      <input type="text" id="genre" name="genre" class="form-control" >
+      <label for="author" class="form-label">Auteur</label>
+      <input type="text" id="author" name="author" class="form-control"><br>
+      <label for="genre" class="form-label">Genre</label>
+      <input type="text" id="genre" name="genre" class="form-control" ><br>
 
-      <label for="description">Description</label>
-      <textarea id="description" name="description"  class="form-control"></textarea>
+      <label for="description" class="form-label">Description</label>
+      <textarea id="description" name="description"  class="form-control"></textarea><br>
 
-      <label for="publishedDate">Date de publication</label>
-      <input type="text" id="publishedDate" name="publishedDate" class="form-control">
-      <button id="modif">Enregistrer</button>
+      <label for="publishedDate" class="form-label">Date de publication</label>
+      <input type="text" id="publishedDate" name="publishedDate" class="form-control"><br>
+      <button id="modif" class="btn btn-success">Enregistrer</button>
     </form>
+    <footer id="footer">
+
+    </footer>
     <script src="../assets/js/edit.js"></script>
+    <script src="../assets/js/footer.js"></script>
   </body>
 </html>

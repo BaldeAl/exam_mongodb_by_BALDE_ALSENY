@@ -9,25 +9,23 @@
 #navigation li a {
     display: block ;
     background: 
-  #900 url(lienCoulissant.png) left top no-repeat ;
-    color: 
-  #fff ;
+  #900 left top ;
+    color:   #fff ;
     font: 1em "Trebuchet MS",Arial,sans-serif ;
     line-height: 1em ;
     padding: 4px 0 ;
     text-align: center ;
+    
   }	
 #navigation li a:hover, #navigation li a:focus, #navigation li a:active {
     background: 
-  #033 url(lienCoulissant.png) right top no-repeat ;
+  #033  right top ;
   }
-
 .acceuil {
-    background-image: url(../img/book.png);
-    background-size: cover;
-    font-family: Algerian;
-    font-style: oblique;
+  background: url("../img/book.png");
+  background-size: cover;
 }
+
 .acceuil h1 {
     text-align: justify;
     text-shadow: #fff;
@@ -35,13 +33,43 @@
     text-decoration: solid;
     text-decoration: #033;
 }
-.acceuil a {
-    text-transform: uppercase;
-    text-decoration-line: none;
+header {
+  background-image: url("../img/store.jpg");
+  background-size: cover;
+  color: aliceblue;
+  border-bottom: solid;
   
 }
-header h1 {
-  background-image: url("../img/store.jpg");
-  background-size: contain;
-  color: aliceblue;
+ul {
+  display: flex;
+  padding-left: 0%;
+}
+body {
+  margin: auto;
+}
+
+table {
+  margin: auto;
+  margin-top: 2%;
+  margin-right: 2%;
+}
+thead {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: #033;
+}
+tbody {
+  text-align: justify;
+  text-size-adjust: auto;
+  text-transform: uppercase;
+  background-color: aliceblue;
+  
+}
+
+#footer {
+  font-style: normal;
+  background: transparent;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
 }

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ajouter un livre</title>
+    <link rel="shortcut icon" href="../assets/img/img-default.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Ajouter un livre</title>
   </head>
   <body>
     <header>
@@ -14,38 +15,29 @@
           
         </ul>
     </header>
-    <table style="opacity: 0;">
-      <thead>
-        <tr>
-          <th>Titre</th>
-          <th>Auteur</th>
-          <th>Genre</th>
-          <th>Description</th>
-          <th>Date de publication</th>
-          <th>Détails</th>
-          <th>Suppression</th>
-        </tr>
-      </thead>
-      <tbody id="books">
-
-      </tbody>
+      <br>
     <form name="form" id="form-ajout">
-      <label for="title">Titre</label>
-      <input type="text" id="title" name="title" class="form-control" required>
+      <label class="form-label " for="title">Titre</label>
+      <input type="text" id="title" name="title" class="form-control" required><br>
 
-      <label for="author">Auteur</label>
-      <input type="text" id="author" name="author" class="form-control" required>
-      <label for="genre">Genre</label>
-      <input type="text" id="genre" name="genre" class="form-control"  required>
+      <label for="author" class="form-label">Auteur</label>
+      <input type="text" id="author" name="author" class="form-control" required><br>
+      <label for="genre" class="form-label">Genre</label>
+      <input type="text" id="genre" name="genre" class="form-control"  required><br>
 
-      <label for="description">Description</label>
-      <textarea id="description" name="description"  class="form-control"></textarea>
+      <label for="description" class="form-label">Description</label>
+      <textarea id="description" name="description"  class="form-control" required></textarea><br>
 
-      <label for="publishedDate">Date de publication</label>
-      <input type="text" id="publishedDate" name="publishedDate" class="form-control" required>
+      <label for="publishedDate" class="form-label">Date de publication</label>
+      <input type="text" id="publishedDate" name="publishedDate" class="form-control" required><br>
 
-      <button class="btn btn-outline-success" id="valid">Ajouter</button>
+      
+      <button class="btn btn-success" id="valid">Ajouter</button>
     </form>
+    <footer id="footer">
+
+    </footer>
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/footer.js"></script>
   </body>
 </html>
