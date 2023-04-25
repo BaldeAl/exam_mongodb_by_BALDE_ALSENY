@@ -1,5 +1,4 @@
 # exam_mongodb
-# exam_mongodb
 # Ceci est le rendu de mon devoir de mongodb
 # Pour ce j'ai choisi de représenter le stock de livre d'une librairie
 
